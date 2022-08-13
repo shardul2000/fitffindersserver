@@ -18,9 +18,7 @@ app.use(function(req, res, next) {
 app.use(express.urlencoded({ extended: true }))
 
 app.get("/", async(req, res, next) => {
-   const c = await getUsers();
-   console.log(c);
-    res.status(200).json({response: c});
+    res.status(200).json({response: "hello"});
 });
 
 app.use("/api/profile", require("./routes/profile"));
